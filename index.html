@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>+1.000 GIFs de Exercícios para Personal Trainers</title>
-<meta name="description" content="Biblioteca com +1.000 GIFs de exercícios prontos pra enviar via WhatsApp. Corrija a postura dos seus alunos em segundos.">
+<title>MoviFit — +900 GIFs de Exercícios Animados para Personal Trainers</title>
+<meta name="description" content="Conheça o MoviFit: biblioteca com +900 GIFs de exercícios animados, prontos pra enviar via WhatsApp. Corrija a postura dos seus alunos em segundos.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -96,17 +96,14 @@
   .recebe-list strong{color:var(--text); font-weight:700;}
 
   /* PROVA SOCIAL */
-  .depoimentos{padding:48px 20px; background:var(--navy-deep);}
+  .depoimentos{padding:48px 0; background:var(--navy-deep); overflow:hidden;}
   .depoimentos .kicker{display:block; text-align:center; color:var(--gold); font-size:12px; font-weight:800; letter-spacing:2.5px; margin-bottom:10px;}
-  .depoimentos h2{color:#fff; font-size:22px; text-align:center; margin-bottom:28px;}
-  .dep-card{background:#fff; border-radius:16px; padding:20px; margin-bottom:14px; max-width:480px; margin-left:auto; margin-right:auto;}
-  .dep-card .estrelas{color:var(--gold); font-size:15px; margin-bottom:8px;}
-  .dep-card p.texto{font-size:14px; color:var(--text); margin-bottom:12px; font-style:italic;}
-  .dep-card .autor{display:flex; align-items:center; gap:10px;}
-  .dep-card .avatar{width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,var(--blue),var(--navy)); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:14px; flex:none;}
-  .dep-card .nome{font-size:13px; font-weight:700; color:var(--text);}
-  .dep-card .local{font-size:11.5px; color:var(--text-light);}
-  .depoimentos .aviso{text-align:center; color:rgba(255,255,255,.35); font-size:10.5px; margin-top:6px;}
+  .depoimentos h2{color:#fff; font-size:22px; text-align:center; margin-bottom:28px; padding:0 20px;}
+  .dep-scroll{width:100%; overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent); mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);}
+  .dep-track{display:flex; gap:16px; width:max-content; animation:dep-scroll 40s linear infinite;}
+  .dep-track:hover{animation-play-state:paused;}
+  .dep-track img{height:380px; width:auto; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.35); flex:none; border:1px solid rgba(255,255,255,.08);}
+  @keyframes dep-scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
 
   /* BONUS */
   .bonus{padding:56px 20px 48px; background:#fff; text-align:center;}
@@ -255,7 +252,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
   <div class="marquee-track">
     <span class="item">⚡ Desconto especial termina em <span id="timer">15:00</span></span>
     <span class="item">•</span>
-    <span class="item">+1.000 GIFs de exercícios</span>
+    <span class="item">+900 GIFs de exercícios</span>
     <span class="item">•</span>
     <span class="item">Acesso imediato</span>
     <span class="item">•</span>
@@ -263,7 +260,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
     <span class="item">•</span>
     <span class="item">⚡ Desconto especial termina em <span id="timer2">15:00</span></span>
     <span class="item">•</span>
-    <span class="item">+1.000 GIFs de exercícios</span>
+    <span class="item">+900 GIFs de exercícios</span>
     <span class="item">•</span>
     <span class="item">Acesso imediato</span>
     <span class="item">•</span>
@@ -275,7 +272,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
   <div class="container">
     <span class="kicker">🏋️ PARA PERSONAL TRAINERS E EDUCADORES FÍSICOS</span>
     <h1>Seus alunos ainda erram a execução — mesmo depois de você explicar?</h1>
-    <p class="sub">Tenha uma biblioteca profissional com <strong>+1.000 GIFs de exercícios</strong> prontos pra enviar por WhatsApp, iMessage ou qualquer app de mensagem.</p>
+    <p class="sub">Tenha uma biblioteca profissional com <strong>+900 GIFs de exercícios</strong> prontos pra enviar por WhatsApp, iMessage ou qualquer app de mensagem.</p>
     <div class="hero-grid">
       <!-- Trocar pelos 6 GIFs/vídeos reais de exercícios (formato 9:16) -->
       <div class="card"><img src="assets/gif-exemplo-1.jpg" alt="Exemplo de GIF de exercício 1"></div>
@@ -288,7 +285,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
     <a href="#pricing" class="btn">QUERO A BIBLIOTECA COMPLETA</a>
     <p class="subcta">Acesso imediato. Pagamento único. Direto no seu celular.</p>
     <div class="stats">
-      <div class="stat"><div class="num">+1.000</div><div class="lbl">GIFs de exercícios</div></div>
+      <div class="stat"><div class="num">+900</div><div class="lbl">GIFs de exercícios</div></div>
       <div class="stat"><div class="num">4</div><div class="lbl">Bônus grátis</div></div>
       <div class="stat"><div class="num">7 dias</div><div class="lbl">De garantia</div></div>
     </div>
@@ -329,7 +326,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
     </div>
   </div>
   <ul class="recebe-list">
-    <li><span class="check">✓</span><p>Acesso a <strong>+1.000 GIFs de exercícios</strong> em alta qualidade</p></li>
+    <li><span class="check">✓</span><p>Acesso a <strong>+900 GIFs de exercícios</strong> em alta qualidade</p></li>
     <li><span class="check">✓</span><p>Pacote completo pra <strong>corrigir a postura</strong> dos seus alunos rapidinho</p></li>
     <li><span class="check">✓</span><p>GIFs leves e em alta resolução, organizados pra <strong>envio rápido</strong></p></li>
     <li><span class="check">✓</span><p>Organizados por categoria (Força, Funcional, Mobilidade etc.) e <strong>A a Z</strong></p></li>
@@ -343,32 +340,21 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
 <div class="depoimentos">
   <span class="kicker">DEPOIMENTOS REAIS</span>
   <h2>Quem já usa, recomenda</h2>
-  <!-- ATENÇÃO: depoimentos abaixo são PLACEHOLDER. Troque por prints/textos reais de clientes antes de publicar. -->
-  <div class="dep-card">
-    <div class="estrelas">★★★★★</div>
-    <p class="texto">"Troquei a explicação por texto pelos GIFs e meus alunos passaram a acertar a postura de primeira. Economizo um tempo absurdo em cada sessão."</p>
-    <div class="autor">
-      <div class="avatar">R</div>
-      <div><div class="nome">Rafael M.</div><div class="local">Personal Trainer — São Paulo/SP</div></div>
+  <div class="dep-scroll">
+    <div class="dep-track">
+      <img src="assets/depoimentos/depoimento-1-carlos.png" alt="Depoimento de cliente — Carlos Mendes, Personal Trainer">
+      <img src="assets/depoimentos/depoimento-2-juliana.png" alt="Depoimento de cliente — Juliana Ribeiro, Professora de Educação Física">
+      <img src="assets/depoimentos/depoimento-3-lucas.png" alt="Depoimento de cliente — Lucas Ferreira, Aluno">
+      <img src="assets/depoimentos/depoimento-4-patricia.png" alt="Depoimento de cliente — Patrícia Almeida, Proprietária de Academia">
+      <img src="assets/depoimentos/depoimento-5-rafael.png" alt="Depoimento de cliente — Rafael Costa, Consultor Fitness">
+      <!-- Duplicado pra loop infinito sem emenda -->
+      <img src="assets/depoimentos/depoimento-1-carlos.png" alt="" aria-hidden="true">
+      <img src="assets/depoimentos/depoimento-2-juliana.png" alt="" aria-hidden="true">
+      <img src="assets/depoimentos/depoimento-3-lucas.png" alt="" aria-hidden="true">
+      <img src="assets/depoimentos/depoimento-4-patricia.png" alt="" aria-hidden="true">
+      <img src="assets/depoimentos/depoimento-5-rafael.png" alt="" aria-hidden="true">
     </div>
   </div>
-  <div class="dep-card">
-    <div class="estrelas">★★★★★</div>
-    <p class="texto">"Uso muito no atendimento online. Mando o GIF no WhatsApp e o aluno entende na hora, sem precisar de chamada de vídeo."</p>
-    <div class="autor">
-      <div class="avatar">C</div>
-      <div><div class="nome">Camila S.</div><div class="local">Educadora Física — Curitiba/PR</div></div>
-    </div>
-  </div>
-  <div class="dep-card">
-    <div class="estrelas">★★★★★</div>
-    <p class="texto">"Os bônus vieram de brinde mas acabei usando toda semana. A planilha de periodização sozinha já valeu o investimento."</p>
-    <div class="autor">
-      <div class="avatar">B</div>
-      <div><div class="nome">Bruno T.</div><div class="local">Personal Trainer — Belo Horizonte/MG</div></div>
-    </div>
-  </div>
-  <p class="aviso">*Depoimentos ilustrativos — substitua por relatos reais de clientes.</p>
 </div>
 
 <div class="bonus">
@@ -425,7 +411,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
   <p class="sub">Três toques entre "não sei explicar" e a execução perfeita.</p>
   <div class="passo">
     <div class="num">1</div>
-    <div><h4>Busque o exercício</h4><p>Digite o nome do movimento e encontre na biblioteca de +1.000 GIFs em segundos.</p></div>
+    <div><h4>Busque o exercício</h4><p>Digite o nome do movimento e encontre na biblioteca de +900 GIFs em segundos.</p></div>
   </div>
   <div class="passo">
     <div class="num">2</div>
@@ -449,14 +435,13 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
     </div>
 
     <span class="badge">OFERTA ESPECIAL</span>
-    <!-- Trocar pela imagem do mockup do produto -->
-    <img class="mockup" src="assets/mockup-produto.jpg" alt="Mockup da Biblioteca de GIFs de Exercícios">
-    <h3>A Biblioteca Completa de GIFs de Exercícios</h3>
+    <img class="mockup" src="assets/mockup-movifit.png" alt="Mockup do produto MoviFit — biblioteca de exercícios animados">
+    <h3>A Biblioteca Completa MoviFit de GIFs de Exercícios</h3>
 
     <div class="stack">
       <div class="stack-titulo">Veja tudo que está incluso:</div>
       <ul>
-        <li><span><b>+1.000 GIFs de Exercícios</b> em HD — prontos pra enviar via WhatsApp ou iMessage</span><span class="valor-item">(R$97)</span></li>
+        <li><span><b>+900 GIFs de Exercícios</b> em HD — prontos pra enviar via WhatsApp ou iMessage</span><span class="valor-item">(R$97)</span></li>
         <li><span><b style="color:var(--red)">BÔNUS:</b> Manual de Construção Muscular 💪</span><span class="valor-item">(R$27)</span></li>
         <li><span><b style="color:var(--red)">BÔNUS:</b> Guia de Postura Correta ✅</span><span class="valor-item">(R$27)</span></li>
         <li><span><b style="color:var(--red)">BÔNUS:</b> 150 Receitas Fitness 🥗</span><span class="valor-item">(R$27)</span></li>
@@ -514,7 +499,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
 
   <div class="faq-item">
     <div class="pergunta">Como vou receber o material? <span class="seta">+</span></div>
-    <div class="resposta"><p>O acesso é <strong>imediato</strong>. Logo após a compra, você recebe um e-mail com seu login pra área exclusiva, onde estão os +1.000 GIFs e os 4 bônus — tudo organizado e pronto pra usar e baixar.</p></div>
+    <div class="resposta"><p>O acesso é <strong>imediato</strong>. Logo após a compra, você recebe um e-mail com seu login pra área exclusiva, onde estão os +900 GIFs e os 4 bônus — tudo organizado e pronto pra usar e baixar.</p></div>
   </div>
   <div class="faq-item">
     <div class="pergunta">Posso usar os GIFs comercialmente com meus alunos? <span class="seta">+</span></div>
@@ -572,7 +557,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
     <button class="fechar" id="fechar-modal">×</button>
     <div class="badge">⚠️ ESPERA!</div>
     <h3>Não saia de mãos vazias</h3>
-    <p>Você está a <strong>um clique</strong> de ter +1.000 GIFs de exercícios prontos pro menor preço que você vai ver. Essa oferta não vai estar aqui quando você voltar.</p>
+    <p>Você está a <strong>um clique</strong> de ter +900 GIFs de exercícios prontos pro menor preço que você vai ver. Essa oferta não vai estar aqui quando você voltar.</p>
     <a href="#pricing" class="btn btn-sim" id="btn-sim-exit">SIM, EU QUERO</a>
     <button class="link-nao" id="recusar-exit">Não, vou deixar passar essa oferta</button>
   </div>
