@@ -15,6 +15,9 @@
     --navy-deep:#0a0f22;
     --blue:#4f5eff;
     --blue-light:#c7ccff;
+    --roxo:#7c6ff0;
+    --roxo-dark:#5b4bd6;
+    --roxo-light:#e3dffc;
     --green-cta:#16a34a;
     --green-light:#bbf7d0;
     --gold:#f59e0b;
@@ -105,17 +108,6 @@
   .dep-track img{height:380px; width:auto; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.35); flex:none; border:1px solid rgba(255,255,255,.08);}
   @keyframes dep-scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
 
-  /* BONUS */
-  .bonus{padding:56px 20px 48px; background:#fff; text-align:center;}
-  .bonus h2{font-size:26px; font-weight:700; max-width:440px; margin:0 auto 40px; line-height:1.25;}
-  .bonus h2 .destaque{color:var(--blue);}
-  .bonus-card{background:#f2f4fa; border:1px solid var(--border); border-radius:20px; padding:32px 24px; margin-bottom:22px; max-width:480px; margin-left:auto; margin-right:auto; text-align:center;}
-  .bonus-card img{max-width:100%; height:auto; margin:0 auto 22px; border-radius:12px;}
-  .bonus-card h4{font-size:19px; margin-bottom:12px;}
-  .bonus-card p.desc{font-size:14.5px; color:var(--text-light); margin-bottom:18px;}
-  .bonus-card .valor{background:var(--navy); color:#fff; border-radius:10px; padding:12px 18px; font-size:15px; font-weight:700; display:inline-block;}
-  .bonus-card .valor s{color:#9aa3c0; font-weight:500; margin-right:4px;}
-
   /* COMO FUNCIONA */
   .como{padding:48px 20px; background:#fff;}
   .como h2{font-size:22px; text-align:center; margin-bottom:6px;}
@@ -125,40 +117,61 @@
   .passo h4{font-size:15px; margin-bottom:4px;}
   .passo p{font-size:13px; color:var(--text-light);}
 
-  /* PRICING */
-  .pricing{padding:48px 20px; background:var(--bg);}
-  .plano{background:#fff; border:2px solid var(--green-cta); border-radius:20px; padding:22px 20px 20px; max-width:440px; margin:0 auto; position:relative; box-shadow:0 14px 34px rgba(17,26,51,.1);}
-  .escassez{background:#fff7ed; border:1px solid #fed7aa; border-radius:12px; padding:12px 14px; margin-bottom:16px;}
-  .escassez-topo{display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; gap:10px;}
-  .escassez-label{font-size:11px; font-weight:700; color:#7c2d12; text-transform:uppercase; letter-spacing:.5px;}
-  .escassez-contador{font-size:15px; font-weight:900; color:var(--text);}
-  .escassez-contador .atual{color:var(--red);}
-  .escassez-contador .total{color:#94a3b8; font-weight:700;}
-  .escassez-barra{width:100%; height:8px; background:#fde4cb; border-radius:6px; overflow:hidden; margin-bottom:8px;}
-  .escassez-barra .fill{height:100%; width:92%; background:linear-gradient(90deg,#f97316,var(--red)); border-radius:6px;}
-  .escassez-resto{font-size:11px; color:#7c2d12; font-weight:600;}
-  .escassez-resto b{color:var(--red); font-weight:900;}
-  .plano .badge{display:inline-block; position:relative; left:50%; transform:translateX(-50%); background:var(--green-cta); color:#fff; font-size:12.5px; font-weight:800; letter-spacing:1px; padding:7px 20px; border-radius:999px; margin-bottom:14px;}
-  .plano img.mockup{max-width:100%; border-radius:12px; margin:0 auto 16px; object-fit:contain;}
-  .plano h3{font-size:20px; font-weight:900; text-align:center; margin-bottom:16px;}
-  .stack{background:#fafbfc; border:1px solid var(--border); border-radius:12px; padding:14px 14px 2px; margin-bottom:14px;}
-  .stack-titulo{font-weight:800; font-size:13.5px; border-bottom:2px solid var(--navy); padding-bottom:8px; margin-bottom:10px;}
-  .stack ul{list-style:none;}
-  .stack li{display:flex; justify-content:space-between; gap:8px; padding:9px 0; border-bottom:1px dashed var(--border); font-size:12.5px; color:var(--text-light);}
-  .stack li:last-child{border-bottom:none;}
-  .stack li b{color:var(--text);}
-  .stack li .valor-item{font-weight:800; color:var(--red); white-space:nowrap; font-size:12px;}
-  .stack-total{text-align:center; padding:14px 0 4px; border-top:2px solid var(--navy); margin-top:4px;}
-  .stack-total .lbl{font-weight:800; font-size:15px;}
-  .stack-total .val{font-weight:900; font-size:20px; color:var(--red); text-decoration:line-through; margin-left:6px;}
-  .preco-final{text-align:center; background:linear-gradient(135deg,var(--green-light),#bbf7d0); border:2px dashed var(--green-cta); border-radius:12px; padding:16px 14px 18px; margin:16px 0;}
-  .preco-final .lbl{font-size:12px; color:#15803d; font-weight:700; text-transform:uppercase; letter-spacing:.5px; margin-bottom:6px;}
-  .preco-final .val{font-weight:900; font-size:42px; color:#16a34a; letter-spacing:-1px;}
-  .preco-final .parcela{display:block; font-size:12px; color:var(--text-light); margin-top:4px;}
-  .preco-final .urgencia{display:block; margin-top:8px; font-size:11.5px; color:var(--text-light); font-style:italic;}
-  .preco-final .urgencia b{color:#ea580c;}
+  /* PRICING ETAPA 1 — MOVIFIT ESSENCIAL */
+  .pricing{padding:48px 20px 20px; background:var(--bg);}
+  .pricing-header{text-align:center; max-width:460px; margin:0 auto 28px;}
+  .pricing-header h2{font-size:22px; margin-bottom:10px;}
+  .pricing-header p{font-size:14px; color:var(--text-light);}
+  .plano-essencial{background:#fff; border:2px solid var(--border); border-radius:20px; padding:28px 24px 24px; max-width:440px; margin:0 auto; box-shadow:0 14px 34px rgba(17,26,51,.08); text-align:center;}
+  .plano-essencial .badge{display:inline-block; background:var(--navy); color:#fff; font-size:12.5px; font-weight:800; letter-spacing:1px; padding:8px 22px; border-radius:999px; margin-bottom:20px;}
+  .preco-simples{margin-bottom:22px;}
+  .preco-simples .valor{display:block; font-size:44px; font-weight:900; font-family:'Space Grotesk',sans-serif; color:var(--navy); letter-spacing:-1px;}
+  .preco-simples .parcela{font-size:13px; color:var(--text-light);}
+  .lista-conteudo{list-style:none; text-align:left; max-width:320px; margin:0 auto 18px;}
+  .lista-conteudo li{display:flex; gap:10px; align-items:flex-start; font-size:14px; padding:7px 0; color:var(--text);}
+  .lista-conteudo li:before{content:"✓"; color:var(--green-cta); font-weight:800; flex:none;}
+  .plano-essencial .obs{font-size:12px; color:var(--text-light); font-style:italic; margin-bottom:20px;}
+
+  /* PRICING ETAPA 3 — MOVIFIT COMPLETO DIRETO */
+  .pricing-completo{padding:20px 20px 48px; background:var(--bg);}
+  .pricing-completo .pricing-header h2{font-size:22px;}
+  .plano-completo{background:linear-gradient(180deg,#fff 0%, var(--roxo-light) 140%); border:2px solid var(--roxo); border-radius:20px; padding:28px 24px 24px; max-width:440px; margin:0 auto; box-shadow:0 14px 34px rgba(124,111,240,.18); text-align:center;}
+  .plano-completo .badge-roxo{display:inline-block; background:linear-gradient(135deg,var(--roxo),var(--roxo-dark)); color:#fff; font-size:12.5px; font-weight:800; letter-spacing:1px; padding:8px 22px; border-radius:999px; margin-bottom:18px;}
+  .plano-completo img.mockup{max-width:180px; margin:0 auto 18px; border-radius:12px; object-fit:contain;}
+  .plano-completo .preco-simples .valor{color:var(--roxo-dark);}
+  .plano-completo .lista-conteudo li:before{color:var(--roxo);}
+  .plano-completo .btn{background:linear-gradient(135deg,var(--roxo) 0%, var(--roxo-dark) 100%); box-shadow:0 10px 26px rgba(124,111,240,.35), 0 4px 14px rgba(0,0,0,.15);}
+  .plano-completo .btn:hover{box-shadow:0 14px 32px rgba(124,111,240,.42);}
   .trust{display:flex; justify-content:center; gap:18px; margin-top:14px;}
   .trust span{font-size:11px; font-weight:700; color:var(--text-light);}
+
+  /* MODAL DE UPSELL — ETAPA 2 */
+  .modal-upsell{max-width:520px; width:100%; padding:0; overflow:hidden; border-top:none; max-height:92vh; display:flex; flex-direction:column;}
+  .modal-upsell-topbar{background:linear-gradient(90deg,var(--roxo-dark),var(--roxo)); color:#fff; text-align:center; font-size:12.5px; font-weight:800; letter-spacing:.5px; padding:12px 16px; flex:none;}
+  .modal-upsell-scroll{overflow-y:auto; padding:26px 22px 30px;}
+  .modal-upsell-scroll h3{font-size:19px; color:var(--navy); text-align:center; margin-bottom:10px; line-height:1.25;}
+  .modal-upsell-scroll>p.sub{font-size:13.5px; color:var(--text-light); text-align:center; margin-bottom:22px;}
+  .comparativo{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:22px;}
+  .comparativo .col{border-radius:14px; padding:14px 12px;}
+  .comparativo .col.col-essencial{background:#f6f7fb; border:1px solid var(--border);}
+  .comparativo .col.col-completo{background:var(--roxo-light); border:1px solid var(--roxo);}
+  .comparativo .col h4{font-size:11.5px; text-align:center; margin-bottom:10px; letter-spacing:.3px;}
+  .comparativo .col.col-completo h4{color:var(--roxo-dark);}
+  .comparativo .col ul{list-style:none;}
+  .comparativo .col li{font-size:11.5px; padding:4px 0; color:var(--text-light); display:flex; gap:6px; align-items:flex-start;}
+  .comparativo .col-essencial li:before{content:"–"; color:#94a3b8; flex:none;}
+  .comparativo .col-completo li{color:var(--text);}
+  .comparativo .col-completo li:before{content:"✓"; color:var(--roxo-dark); font-weight:800; flex:none;}
+  .comparativo .preco-col{text-align:center; font-weight:800; font-size:14px; margin-top:10px; color:var(--navy);}
+  .bonus-grid-modal{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:22px;}
+  .bonus-grid-modal img{border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,.14); aspect-ratio:1/1; object-fit:cover;}
+  .bonus-grid-modal .nome{font-size:9px; text-align:center; margin-top:5px; color:var(--text-light); line-height:1.2;}
+  .preco-final-modal{text-align:center; margin-bottom:10px;}
+  .preco-final-modal .riscado{display:block; font-size:13px; color:var(--text-light); text-decoration:line-through; margin-bottom:4px;}
+  .preco-final-modal .destaque{display:block; font-size:19px; font-weight:900; color:var(--roxo-dark); font-family:'Space Grotesk',sans-serif;}
+  .modal-upsell-scroll .explicacao{text-align:center; font-size:12px; color:var(--text-light); margin-bottom:20px;}
+  .modal-upsell-scroll .btn{margin-bottom:10px;}
+  .modal-upsell-scroll .btn-completo-upsell{background:linear-gradient(135deg,var(--roxo) 0%, var(--roxo-dark) 100%); box-shadow:0 10px 26px rgba(124,111,240,.35), 0 4px 14px rgba(0,0,0,.15);}
 
   /* GARANTIA */
   .garantia{padding:20px 20px 48px; background:var(--bg);}
@@ -344,38 +357,6 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
   </div>
 </div>
 
-<div class="bonus">
-  <h2>Além de tudo isso, você ainda leva <span class="destaque">4 bônus grátis</span></h2>
-
-  <div class="bonus-card">
-    <!-- Trocar pela imagem real do bônus -->
-    <img src="assets/bonus-1-manual-hipertrofia.jpg" alt="Bônus 1 — Manual de Construção Muscular">
-    <h4>Manual de Construção Muscular</h4>
-    <p class="desc">Um guia prático de biomecânica básica que te ajuda a entender como cada exercício funciona, quais músculos ativa e como ensinar do jeito certo — pra você ganhar confiança e autoridade.</p>
-    <div class="valor">Valor: <s>R$27</s> GRÁTIS</div>
-  </div>
-
-  <div class="bonus-card">
-    <img src="assets/bonus-2-guia-postura.jpg" alt="Bônus 2 — Guia de Postura Correta">
-    <h4>Guia de Postura Correta</h4>
-    <p class="desc">Um checklist direto ao ponto com os erros mais comuns e os principais pontos de atenção, pra você corrigir seus alunos rápido e com segurança.</p>
-    <div class="valor">Valor: <s>R$27</s> GRÁTIS</div>
-  </div>
-
-  <div class="bonus-card">
-    <img src="assets/bonus-3-receitas-fitness.jpg" alt="Bônus 3 — 150 Receitas Fitness">
-    <h4>150 Receitas Fitness</h4>
-    <p class="desc">Uma coleção pronta de receitas pra você enviar pros seus alunos, agregar valor no acompanhamento e melhorar a retenção.</p>
-    <div class="valor">Valor: <s>R$27</s> GRÁTIS</div>
-  </div>
-
-  <div class="bonus-card">
-    <img src="assets/bonus-4-planilha-periodizacao.jpg" alt="Bônus 4 — Planilha de Periodização Automática">
-    <h4>Planilha de Periodização Automática</h4>
-    <p class="desc">Uma planilha pronta que facilita montar programas de treino organizados, acompanhar a evolução dos alunos e economizar horas de planejamento.</p>
-    <div class="valor">Valor: <s>R$27</s> GRÁTIS</div>
-  </div>
-</div>
 
 <div class="como">
   <h2>Como funciona</h2>
@@ -395,43 +376,55 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
 </div>
 
 <div class="pricing container" id="pricing">
-  <div class="plano">
-    <div class="escassez">
-      <div class="escassez-topo">
-        <span class="escassez-label">🔥 Vagas disponíveis</span>
-        <span class="escassez-contador"><span class="atual">92</span><span class="total">/100</span></span>
-      </div>
-      <div class="escassez-barra"><div class="fill"></div></div>
-      <span class="escassez-resto">Só restam <b>8 vagas</b> nesse preço</span>
+  <div class="pricing-header">
+    <h2>COMECE AGORA COM A BIBLIOTECA MOVIFIT</h2>
+    <p>Tenha centenas de exercícios animados para visualizar movimentos, montar treinos e orientar seus alunos.</p>
+  </div>
+
+  <div class="plano-essencial">
+    <span class="badge">MOVIFIT ESSENCIAL</span>
+    <div class="preco-simples">
+      <span class="valor">R$ 10,00</span>
+      <span class="parcela">Pagamento único</span>
     </div>
+    <ul class="lista-conteudo">
+      <li>400 GIFs de exercícios animados</li>
+      <li>Exercícios para academia</li>
+      <li>Exercícios para treinar em casa</li>
+      <li>Organização por grupo muscular</li>
+      <li>Arquivos em alta qualidade</li>
+      <li>Acesso imediato</li>
+      <li>Sem mensalidade</li>
+    </ul>
+    <p class="obs">Esta versão inclui somente os 400 GIFs e não acompanha os bônus.</p>
+    <a href="#checkout-essencial" class="btn" id="btn-essencial">QUERO OS 400 GIFS POR R$ 10</a>
+  </div>
+</div>
 
-    <span class="badge">OFERTA ESPECIAL</span>
-    <img class="mockup" src="assets/mockup-movifit.png" alt="Mockup do produto MoviFit — biblioteca de exercícios animados">
-    <h3>A Biblioteca Completa MoviFit de GIFs de Exercícios</h3>
+<div class="pricing-completo container">
+  <div class="pricing-header">
+    <h2>QUERO COMEÇAR COM A EXPERIÊNCIA COMPLETA</h2>
+  </div>
 
-    <div class="stack">
-      <div class="stack-titulo">Veja tudo que está incluso:</div>
-      <ul>
-        <li><span><b>+900 GIFs de Exercícios</b> em HD — prontos pra enviar via WhatsApp ou iMessage</span><span class="valor-item">(R$97)</span></li>
-        <li><span><b style="color:var(--red)">BÔNUS:</b> Manual de Construção Muscular 💪</span><span class="valor-item">(R$27)</span></li>
-        <li><span><b style="color:var(--red)">BÔNUS:</b> Guia de Postura Correta ✅</span><span class="valor-item">(R$27)</span></li>
-        <li><span><b style="color:var(--red)">BÔNUS:</b> 150 Receitas Fitness 🥗</span><span class="valor-item">(R$27)</span></li>
-        <li><span><b style="color:var(--red)">BÔNUS:</b> Planilha de Periodização Automática 📊</span><span class="valor-item">(R$27)</span></li>
-        <li><span><b>Organizado por categoria e A–Z</b></span></li>
-        <li><span><b>Licença comercial</b> — alunos ilimitados</span></li>
-        <li><span><b>Acesso vitalício</b> + todas as atualizações futuras</span></li>
-        <li><span><b>Garantia de 7 dias</b></span></li>
-      </ul>
-      <div class="stack-total"><span class="lbl">Valor total:</span> <span class="val">R$232</span></div>
+  <div class="plano-completo">
+    <span class="badge-roxo">MOVIFIT COMPLETO</span>
+    <img class="mockup" src="assets/mockup-movifit.png" alt="Mockup do produto MoviFit — biblioteca completa de exercícios animados">
+    <div class="preco-simples">
+      <span class="valor">R$ 27,90</span>
+      <span class="parcela">Pagamento único</span>
     </div>
-
-    <div class="preco-final">
-      <p class="lbl">Hoje, você leva tudo por apenas</p>
-      <div class="val">R$17</div>
-      <span class="urgencia">💰 Economize <b>R$215</b> — Termina Hoje!</span>
-    </div>
-
-    <a href="#checkout-premium" class="btn">QUERO ACESSO IMEDIATO</a>
+    <ul class="lista-conteudo">
+      <li>Mais de 900 exercícios animados</li>
+      <li>Biblioteca organizada por grupos musculares</li>
+      <li>Exercícios para casa e academia</li>
+      <li>Acesso imediato</li>
+      <li>Atualizações</li>
+      <li>Manual de Construção Muscular</li>
+      <li>Guia de Postura Correta</li>
+      <li>150 Receitas Fitness</li>
+      <li>Planilha de Periodização Automática</li>
+    </ul>
+    <a href="#checkout-completo-direto" class="btn">QUERO O MOVIFIT COMPLETO POR R$ 27,90</a>
 
     <div class="trust">
       <span>⚡ Acesso Imediato</span>
@@ -470,7 +463,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
 
   <div class="faq-item">
     <div class="pergunta">Como vou receber o material? <span class="seta">+</span></div>
-    <div class="resposta"><p>O acesso é <strong>imediato</strong>. Logo após a compra, você recebe um e-mail com seu login pra área exclusiva, onde estão os +900 GIFs e os 4 bônus — tudo organizado e pronto pra usar e baixar.</p></div>
+    <div class="resposta"><p>O acesso é <strong>imediato</strong>. Logo após a compra, você recebe um e-mail com seu login pra área exclusiva, com os GIFs do plano escolhido (e os 4 bônus, se você optou pelo MoviFit Completo) — tudo organizado e pronto pra usar e baixar.</p></div>
   </div>
   <div class="faq-item">
     <div class="pergunta">Posso usar os GIFs comercialmente com meus alunos? <span class="seta">+</span></div>
@@ -498,7 +491,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
   </div>
   <div class="faq-item">
     <div class="pergunta">Isso é útil se eu tô começando agora como personal? <span class="seta">+</span></div>
-    <div class="resposta"><p>Principalmente nesse caso. Além dos GIFs, você recebe o <strong>Manual de Construção Muscular</strong> e o <strong>Guia de Postura Correta</strong>, que te dão a base técnica pra corrigir com confiança e passar autoridade desde o primeiro atendimento.</p></div>
+    <div class="resposta"><p>Principalmente nesse caso. No MoviFit Completo, além dos GIFs, você recebe o <strong>Manual de Construção Muscular</strong> e o <strong>Guia de Postura Correta</strong>, que te dão a base técnica pra corrigir com confiança e passar autoridade desde o primeiro atendimento.</p></div>
   </div>
 
   <a href="#pricing" class="btn">QUERO ACESSO IMEDIATO AGORA</a>
@@ -512,10 +505,10 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
 
 <div class="cta-final">
   <div class="container">
-    <h2>Amanhã essa oferta não existe mais</h2>
-    <p>Depois de hoje o preço volta ao normal e os 4 bônus saem do ar.</p>
+    <h2>Comece agora a corrigir seus alunos com confiança</h2>
+    <p>Escolha o MoviFit Essencial por R$10 ou já garanta a biblioteca completa com os 4 bônus por R$27,90.</p>
     <a href="#pricing" class="btn">QUERO COMEÇAR AGORA</a>
-    <p class="ancora">R$17 hoje ou R$232 de valor cheio depois</p>
+    <p class="ancora">A partir de R$10 — pagamento único, sem mensalidade</p>
   </div>
 </div>
 
@@ -531,6 +524,69 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
     <p>Você está a <strong>um clique</strong> de ter +900 GIFs de exercícios prontos pro menor preço que você vai ver. Essa oferta não vai estar aqui quando você voltar.</p>
     <a href="#pricing" class="btn btn-sim" id="btn-sim-exit">SIM, EU QUERO</a>
     <button class="link-nao" id="recusar-exit">Não, vou deixar passar essa oferta</button>
+  </div>
+</div>
+
+<div class="overlay" id="overlay-upsell">
+  <div class="modal modal-upsell">
+    <div class="modal-upsell-topbar">ESPERE! VOCÊ DESBLOQUEOU UMA CONDIÇÃO ESPECIAL</div>
+    <div class="modal-upsell-scroll">
+      <h3>LEVE A BIBLIOTECA COMPLETA POR APENAS R$ 9,90 A MAIS</h3>
+      <p class="sub">Em vez de ficar somente com 400 GIFs, desbloqueie mais de 900 exercícios animados e receba os quatro bônus.</p>
+
+      <div class="comparativo">
+        <div class="col col-essencial">
+          <h4>MOVIFIT ESSENCIAL</h4>
+          <ul>
+            <li>400 GIFs</li>
+            <li>Sem os quatro bônus</li>
+            <li>Biblioteca reduzida</li>
+          </ul>
+          <div class="preco-col">R$ 10,00</div>
+        </div>
+        <div class="col col-completo">
+          <h4>MOVIFIT COMPLETO</h4>
+          <ul>
+            <li>Mais de 900 GIFs animados</li>
+            <li>Todos os grupos musculares</li>
+            <li>Academia e casa</li>
+            <li>Alta qualidade</li>
+            <li>Atualizações</li>
+            <li>Acesso imediato</li>
+            <li>Pagamento único</li>
+            <li>Sem mensalidade</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bonus-grid-modal">
+        <div>
+          <img src="assets/bonus/bonus-1-manual-construcao-muscular.png" alt="Bônus — Manual de Construção Muscular">
+          <p class="nome">Manual de Construção Muscular</p>
+        </div>
+        <div>
+          <img src="assets/bonus/bonus-2-guia-postura-correta.png" alt="Bônus — Guia de Postura Correta">
+          <p class="nome">Guia de Postura Correta</p>
+        </div>
+        <div>
+          <img src="assets/bonus/bonus-3-150-receitas-fitness.png" alt="Bônus — 150 Receitas Fitness">
+          <p class="nome">150 Receitas Fitness</p>
+        </div>
+        <div>
+          <img src="assets/bonus/bonus-4-planilha-periodizacao.png" alt="Bônus — Planilha de Periodização Automática">
+          <p class="nome">Planilha de Periodização Automática</p>
+        </div>
+      </div>
+
+      <div class="preco-final-modal">
+        <span class="riscado">Preço normal: R$ 27,90</span>
+        <span class="destaque">MOVIFIT COMPLETO POR R$ 19,90</span>
+      </div>
+      <p class="explicacao">Você não pagará R$ 10 mais R$ 19,90. O valor total do seu pedido será somente R$ 19,90.</p>
+
+      <a href="#checkout-completo-upsell" class="btn btn-completo-upsell">SIM, QUERO MAIS DE 900 GIFS E OS BÔNUS POR R$ 19,90</a>
+      <button class="link-nao" id="recusar-upsell">Não, obrigado. Quero somente os 400 GIFs por R$ 10.</button>
+    </div>
   </div>
 </div>
 
@@ -579,6 +635,21 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
     });
     document.getElementById('btn-sim-exit').addEventListener('click', function(){
       overlay.classList.remove('aberto');
+    });
+  })();
+
+  // Modal de upsell (Etapa 2) — disparado ao clicar no MoviFit Essencial
+  (function(){
+    var btnEssencial = document.getElementById('btn-essencial');
+    var overlayUpsell = document.getElementById('overlay-upsell');
+
+    btnEssencial.addEventListener('click', function(e){
+      e.preventDefault();
+      overlayUpsell.classList.add('aberto');
+    });
+
+    document.getElementById('recusar-upsell').addEventListener('click', function(){
+      window.location.href = '#checkout-essencial';
     });
   })();
 </script>
