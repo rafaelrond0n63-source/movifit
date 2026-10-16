@@ -101,7 +101,7 @@
   .phone-badge{background:var(--roxo); color:#fff; font-size:9.5px; font-weight:800; padding:3px 8px; border-radius:999px;}
   .phone-search{background:rgba(255,255,255,.08); border-radius:8px; padding:7px 10px; font-size:10.5px; color:rgba(255,255,255,.5); margin-bottom:10px;}
   .phone-grid{display:grid; grid-template-columns:1fr 1fr; gap:6px;}
-  .phone-grid img{border-radius:8px; aspect-ratio:1; object-fit:cover; background:var(--navy);}
+  .phone-grid img,.phone-grid video{width:100%; border-radius:8px; aspect-ratio:1; object-fit:cover; background:var(--navy);}
   .tangivel-nota{font-size:12px; color:var(--text-dark-secondary); margin-top:22px;}
   .dor{padding:44px 20px; background:var(--bg);}
   .dor h2{font-size:21px; text-align:center; margin-bottom:24px; max-width:440px; margin-left:auto; margin-right:auto;}
@@ -120,7 +120,7 @@
   .recebe-scroll{width:100%; overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); margin-bottom:40px;}
   .recebe-track{display:flex; gap:14px; width:max-content; animation:recebe-scroll 30s linear infinite;}
   .recebe-track:hover{animation-play-state:paused;}
-  .recebe-track img{height:280px; width:auto; border-radius:14px; box-shadow:0 8px 22px rgba(17,26,51,.14); flex:none;}
+  .recebe-track img,.recebe-track video{height:280px; width:280px; object-fit:cover; background:#fff; border-radius:14px; box-shadow:0 8px 22px rgba(17,26,51,.14); flex:none;}
   @keyframes recebe-scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
   .recebe-list{list-style:none; max-width:520px; margin:0 auto; padding:0 20px;}
   .recebe-list li{display:flex; gap:14px; align-items:flex-start; background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px 18px; margin-bottom:12px; box-shadow:0 2px 8px rgba(17,26,51,.05);}
@@ -148,30 +148,65 @@
   .passo h4{font-size:15px; margin-bottom:4px;}
   .passo p{font-size:13px; color:var(--text-light);}
 
-  /* PRICING ETAPA 1 — MOVIFIT ESSENCIAL */
-  .pricing{padding:48px 20px 20px; background:var(--bg);}
+  /* BONUS */
+  .bonus-sec{padding:52px 20px 44px; background:var(--navy-deep); color:#fff;}
+  .bonus-sec .kicker{display:block; text-align:center; color:var(--roxo-light); font-size:12px; font-weight:800; letter-spacing:2.5px; margin-bottom:10px;}
+  .bonus-sec h2{font-size:24px; text-align:center;}
+  .bonus-sec .divider{width:56px; height:4px; background:linear-gradient(90deg,var(--roxo),var(--roxo-light)); border-radius:99px; margin:16px auto 28px;}
+  .bonus-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .bonus-card{background:var(--surface-dark); border:1px solid rgba(147,122,255,.22); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; transition:transform .15s ease;}
+  .bonus-card:hover{transform:translateY(-3px);}
+  .bonus-card img{width:100%; aspect-ratio:1/1; object-fit:cover;}
+  .bonus-card .info{padding:12px 12px 14px; display:flex; flex-direction:column; flex:1;}
+  .bonus-card .tag{align-self:flex-start; background:var(--roxo); color:#fff; font-size:10px; font-weight:800; letter-spacing:1px; padding:3px 9px; border-radius:6px; margin-bottom:8px;}
+  .bonus-card h4{font-size:14px; line-height:1.25; margin-bottom:6px;}
+  .bonus-card p{font-size:12px; color:var(--text-dark-secondary); margin-bottom:10px; flex:1;}
+  .bonus-card .valor{font-size:12px; color:var(--text-dark-secondary);}
+  .bonus-card .valor s{opacity:.8;}
+  .bonus-card .valor strong{color:#4ADE80; font-weight:800; margin-left:4px;}
+  .bonus-total{text-align:center; font-size:14px; color:var(--text-dark-secondary); margin-top:24px;}
+  .bonus-total strong{color:#fff;}
+
+  /* PRICING — PLANOS LADO A LADO */
+  .pricing{padding:48px 20px; background:var(--bg);}
   .pricing-header{text-align:center; max-width:460px; margin:0 auto 28px;}
   .pricing-header h2{font-size:22px; margin-bottom:10px;}
   .pricing-header p{font-size:14px; color:var(--text-light);}
-  .plano-essencial{background:#fff; border:2px solid var(--border); border-radius:20px; padding:28px 24px 24px; max-width:440px; margin:0 auto; box-shadow:0 14px 34px rgba(17,26,51,.08); text-align:center;}
-  .plano-essencial .badge{display:inline-block; background:var(--navy); color:#fff; font-size:12.5px; font-weight:800; letter-spacing:1px; padding:8px 22px; border-radius:999px; margin-bottom:20px;}
-  .preco-simples{margin-bottom:22px;}
-  .preco-simples .valor{display:block; font-size:44px; font-weight:900; font-family:'Space Grotesk',sans-serif; color:var(--text); letter-spacing:-1px;}
-  .preco-simples .parcela{font-size:13px; color:var(--text-light);}
-  .lista-conteudo{list-style:none; text-align:left; max-width:320px; margin:0 auto 18px;}
-  .lista-conteudo li{display:flex; gap:10px; align-items:flex-start; font-size:14px; padding:7px 0; color:var(--text);}
-  .lista-conteudo li:before{content:"✓"; color:var(--green-cta); font-weight:800; flex:none;}
-  .plano-essencial .obs{font-size:12px; color:var(--text-light); font-style:italic; margin-bottom:20px;}
-
-  /* PRICING ETAPA 3 — MOVIFIT COMPLETO DIRETO */
-  .pricing-completo{padding:20px 20px 48px; background:var(--bg);}
-  .pricing-completo .pricing-header h2{font-size:22px;}
-  .plano-completo{background:#fff; border:2px solid var(--roxo); border-radius:20px; padding:28px 24px 24px; max-width:440px; margin:0 auto; box-shadow:0 15px 45px rgba(104,71,245,.15), 0 14px 34px rgba(17,26,51,.06); text-align:center;}
-  .plano-completo .badge-roxo{display:inline-block; background:linear-gradient(135deg,var(--roxo),var(--roxo-light)); color:#fff; font-size:12.5px; font-weight:800; letter-spacing:1px; padding:8px 22px; border-radius:999px; margin-bottom:18px;}
-  .plano-completo img.mockup{max-width:180px; margin:0 auto 18px; border-radius:12px; object-fit:contain;}
+  .planos{display:grid; grid-template-columns:1fr; gap:22px; align-items:stretch;}
+  .plano{position:relative; background:#fff; border-radius:20px; padding:28px 20px 22px; text-align:center; display:flex; flex-direction:column;}
+  .plano .btn{margin-top:auto;}
+  .plano-essencial{border:2px solid var(--border); box-shadow:0 14px 34px rgba(17,26,51,.08);}
+  .plano-essencial .badge{align-self:center; background:var(--navy); color:#fff; font-size:12px; font-weight:800; letter-spacing:1px; padding:7px 18px; border-radius:999px; margin-bottom:18px;}
+  .plano-essencial .btn{background:#fff; color:var(--navy); border:2px solid var(--navy); box-shadow:none; font-size:14px;}
+  .plano-essencial .btn:hover{background:var(--navy); color:#fff;}
+  .plano-completo{border:3px solid var(--roxo); box-shadow:0 18px 48px rgba(104,71,245,.22), 0 14px 34px rgba(17,26,51,.06);}
+  .plano-completo .selo-top{position:absolute; top:-15px; left:50%; transform:translateX(-50%); white-space:nowrap; background:linear-gradient(135deg,#F59E0B,#F97316); color:#fff; font-size:12px; font-weight:900; letter-spacing:1px; padding:6px 16px; border-radius:999px; box-shadow:0 6px 16px rgba(249,115,22,.35);}
+  .plano-completo .badge-roxo{align-self:center; background:linear-gradient(135deg,var(--roxo),var(--roxo-light)); color:#fff; font-size:12px; font-weight:800; letter-spacing:1px; padding:7px 18px; border-radius:999px; margin-bottom:14px;}
+  .plano-completo img.mockup{max-width:170px; margin:0 auto 14px; border-radius:12px; object-fit:contain;}
+  .plano-completo .btn{background:linear-gradient(135deg,#16A34A,#22C55E); box-shadow:0 10px 26px rgba(22,163,74,.35); font-size:15px;}
+  .preco-simples{margin-bottom:18px;}
+  .preco-simples .de{display:block; font-size:14px; color:var(--text-light);}
+  .preco-simples .de s{color:var(--red); font-weight:700;}
+  .preco-simples .valor{display:block; font-size:42px; font-weight:900; font-family:'Space Grotesk',sans-serif; color:var(--text); letter-spacing:-1px; line-height:1.15;}
   .plano-completo .preco-simples .valor{color:var(--roxo);}
+  .preco-simples .parcela{font-size:13px; color:var(--text-light);}
+  .preco-simples .economia{display:inline-block; margin-top:8px; background:var(--green-light); color:#15803D; font-size:12px; font-weight:800; padding:4px 10px; border-radius:6px;}
+  .lista-conteudo{list-style:none; text-align:left; margin:0 auto 18px;}
+  .lista-conteudo li{display:flex; gap:10px; align-items:flex-start; font-size:14px; padding:6px 0; color:var(--text);}
+  .lista-conteudo li:before{content:"✓"; color:var(--green-cta); font-weight:800; flex:none;}
+  .lista-conteudo li.bonus-li strong{color:var(--roxo);}
+  .lista-conteudo li.nao{color:#98A2B3;}
+  .lista-conteudo li.nao:before{content:"✕"; color:#CBD2DC;}
+  .plano-essencial .obs{font-size:12px; color:var(--text-light); font-style:italic; margin-bottom:18px;}
   .trust{display:flex; justify-content:center; gap:18px; margin-top:14px;}
   .trust span{font-size:11px; font-weight:700; color:var(--text-light);}
+  @media(min-width:560px){
+    .bonus-grid{grid-template-columns:repeat(4,1fr);}
+    .planos{grid-template-columns:1fr 1fr; gap:14px;}
+    .plano-essencial{order:-1; margin-top:16px;}
+    .plano{padding:30px 16px 20px;}
+    .preco-simples .valor{font-size:36px;}
+  }
 
   /* MODAL DE UPSELL — ETAPA 2 */
   .modal-upsell{max-width:520px; width:100%; padding:0; overflow:hidden; border-top:none; max-height:92vh; display:flex; flex-direction:column;}
@@ -359,12 +394,12 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
     <h1>Seus alunos ainda erram a execução — mesmo depois de você explicar?</h1>
     <p class="sub">Chega de gastar tempo procurando referência ou tentando explicar de novo. Abra a biblioteca, escolha o exercício certo e mande o GIF em segundos — com <strong>+900 exercícios animados</strong> prontos direto no seu celular.</p>
     <div class="hero-grid">
-      <div class="card"><img src="assets/exemplos/hero-1.gif" alt="GIF animado — Supino Reto"></div>
-      <div class="card"><img src="assets/exemplos/hero-2.gif" alt="GIF animado — Agachamento com Barra"></div>
-      <div class="card"><img src="assets/exemplos/hero-3.gif" alt="GIF animado — Puxada Alta"></div>
-      <div class="card"><img src="assets/exemplos/hero-4.gif" alt="GIF animado — Rosca Direta com Barra"></div>
-      <div class="card"><img src="assets/exemplos/hero-5.gif" alt="GIF animado — Supino Fechado"></div>
-      <div class="card"><img src="assets/exemplos/hero-6.gif" alt="GIF animado — Abdução de Quadril com Cabo"></div>
+      <div class="card"><video src="assets/exemplos/hero-1.mp4" poster="assets/exemplos/hero-1-poster.webp" autoplay muted loop playsinline aria-label="GIF animado — Supino Reto"></video></div>
+      <div class="card"><video src="assets/exemplos/hero-2.mp4" poster="assets/exemplos/hero-2-poster.webp" autoplay muted loop playsinline aria-label="GIF animado — Agachamento com Barra"></video></div>
+      <div class="card"><video src="assets/exemplos/hero-3.mp4" poster="assets/exemplos/hero-3-poster.webp" autoplay muted loop playsinline aria-label="GIF animado — Puxada Alta"></video></div>
+      <div class="card"><video src="assets/exemplos/hero-4.mp4" poster="assets/exemplos/hero-4-poster.webp" autoplay muted loop playsinline aria-label="GIF animado — Rosca Direta com Barra"></video></div>
+      <div class="card"><video src="assets/exemplos/hero-5.mp4" poster="assets/exemplos/hero-5-poster.webp" autoplay muted loop playsinline aria-label="GIF animado — Supino Fechado"></video></div>
+      <div class="card"><video src="assets/exemplos/hero-6.mp4" poster="assets/exemplos/hero-6-poster.webp" autoplay muted loop playsinline aria-label="GIF animado — Abdução de Quadril com Cabo"></video></div>
     </div>
     <a href="#pricing" class="btn">QUERO A BIBLIOTECA COMPLETA</a>
     <p class="subcta">Acesso imediato. Pagamento único. Direto no seu celular.</p>
@@ -390,10 +425,10 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
         </div>
         <div class="phone-search">Buscar exercício...</div>
         <div class="phone-grid">
-          <img src="assets/exemplos/hero-1.gif" alt="GIF real da biblioteca MoviFit — Supino Reto">
-          <img src="assets/exemplos/hero-2.gif" alt="GIF real da biblioteca MoviFit — Agachamento com Barra">
-          <img src="assets/exemplos/recebe-3.gif" alt="GIF real da biblioteca MoviFit — Agachamento Frontal">
-          <img src="assets/exemplos/recebe-4.gif" alt="GIF real da biblioteca MoviFit — Supino Inclinado com Halteres">
+          <video class="lazy-video" data-src="assets/exemplos/hero-1.mp4" poster="assets/exemplos/hero-1-poster.webp" muted loop playsinline preload="none" aria-label="GIF real da biblioteca MoviFit — Supino Reto"></video>
+          <video class="lazy-video" data-src="assets/exemplos/hero-2.mp4" poster="assets/exemplos/hero-2-poster.webp" muted loop playsinline preload="none" aria-label="GIF real da biblioteca MoviFit — Agachamento com Barra"></video>
+          <video class="lazy-video" data-src="assets/exemplos/recebe-3.mp4" poster="assets/exemplos/recebe-3-poster.webp" muted loop playsinline preload="none" aria-label="GIF real da biblioteca MoviFit — Agachamento Frontal"></video>
+          <video class="lazy-video" data-src="assets/exemplos/recebe-4.mp4" poster="assets/exemplos/recebe-4-poster.webp" muted loop playsinline preload="none" aria-label="GIF real da biblioteca MoviFit — Supino Inclinado com Halteres"></video>
         </div>
       </div>
     </div>
@@ -419,18 +454,18 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
   <div class="divider"></div>
   <div class="recebe-scroll">
     <div class="recebe-track">
-      <img src="assets/exemplos/recebe-1.gif" alt="GIF animado — Remada Alta com Halter">
-      <img src="assets/exemplos/recebe-2.gif" alt="GIF animado — Remada Curvada com Barra">
-      <img src="assets/exemplos/recebe-3.gif" alt="GIF animado — Agachamento Frontal">
-      <img src="assets/exemplos/recebe-4.gif" alt="GIF animado — Supino Inclinado com Halteres">
-      <img src="assets/exemplos/recebe-5.gif" alt="GIF animado — Rosca Scott com Barra W">
-      <img src="assets/exemplos/recebe-6.gif" alt="GIF animado — Puxada Alta com Triângulo">
-      <img src="assets/exemplos/recebe-1.gif" alt="" aria-hidden="true">
-      <img src="assets/exemplos/recebe-2.gif" alt="" aria-hidden="true">
-      <img src="assets/exemplos/recebe-3.gif" alt="" aria-hidden="true">
-      <img src="assets/exemplos/recebe-4.gif" alt="" aria-hidden="true">
-      <img src="assets/exemplos/recebe-5.gif" alt="" aria-hidden="true">
-      <img src="assets/exemplos/recebe-6.gif" alt="" aria-hidden="true">
+      <video class="lazy-video" data-src="assets/exemplos/recebe-1.mp4" poster="assets/exemplos/recebe-1-poster.webp" muted loop playsinline preload="none" aria-label="GIF animado — Remada Alta com Halter"></video>
+      <video class="lazy-video" data-src="assets/exemplos/recebe-2.mp4" poster="assets/exemplos/recebe-2-poster.webp" muted loop playsinline preload="none" aria-label="GIF animado — Remada Curvada com Barra"></video>
+      <video class="lazy-video" data-src="assets/exemplos/recebe-3.mp4" poster="assets/exemplos/recebe-3-poster.webp" muted loop playsinline preload="none" aria-label="GIF animado — Agachamento Frontal"></video>
+      <video class="lazy-video" data-src="assets/exemplos/recebe-4.mp4" poster="assets/exemplos/recebe-4-poster.webp" muted loop playsinline preload="none" aria-label="GIF animado — Supino Inclinado com Halteres"></video>
+      <video class="lazy-video" data-src="assets/exemplos/recebe-5.mp4" poster="assets/exemplos/recebe-5-poster.webp" muted loop playsinline preload="none" aria-label="GIF animado — Rosca Scott com Barra W"></video>
+      <video class="lazy-video" data-src="assets/exemplos/recebe-6.mp4" poster="assets/exemplos/recebe-6-poster.webp" muted loop playsinline preload="none" aria-label="GIF animado — Puxada Alta com Triângulo"></video>
+      <video class="lazy-video" data-src="assets/exemplos/recebe-1.mp4" poster="assets/exemplos/recebe-1-poster.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <video class="lazy-video" data-src="assets/exemplos/recebe-2.mp4" poster="assets/exemplos/recebe-2-poster.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <video class="lazy-video" data-src="assets/exemplos/recebe-3.mp4" poster="assets/exemplos/recebe-3-poster.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <video class="lazy-video" data-src="assets/exemplos/recebe-4.mp4" poster="assets/exemplos/recebe-4-poster.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <video class="lazy-video" data-src="assets/exemplos/recebe-5.mp4" poster="assets/exemplos/recebe-5-poster.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <video class="lazy-video" data-src="assets/exemplos/recebe-6.mp4" poster="assets/exemplos/recebe-6-poster.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
     </div>
   </div>
   <ul class="recebe-list">
@@ -450,17 +485,17 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
   <h2>Quem já usa, <span class="destaque">recomenda</span></h2>
   <div class="dep-scroll">
     <div class="dep-track">
-      <img src="assets/depoimentos/depoimento-1-carlos.png" alt="Depoimento de cliente — Carlos Mendes, Personal Trainer">
-      <img src="assets/depoimentos/depoimento-2-juliana.png" alt="Depoimento de cliente — Juliana Ribeiro, Professora de Educação Física">
-      <img src="assets/depoimentos/depoimento-3-lucas.png" alt="Depoimento de cliente — Lucas Ferreira, Aluno">
-      <img src="assets/depoimentos/depoimento-4-patricia.png" alt="Depoimento de cliente — Patrícia Almeida, Proprietária de Academia">
-      <img src="assets/depoimentos/depoimento-5-rafael.png" alt="Depoimento de cliente — Rafael Costa, Consultor Fitness">
+      <img loading="lazy" decoding="async" width="428" height="760" src="assets/depoimentos/depoimento-1-carlos.webp" alt="Depoimento de cliente — Carlos Mendes, Personal Trainer">
+      <img loading="lazy" decoding="async" width="428" height="760" src="assets/depoimentos/depoimento-2-juliana.webp" alt="Depoimento de cliente — Juliana Ribeiro, Professora de Educação Física">
+      <img loading="lazy" decoding="async" width="428" height="760" src="assets/depoimentos/depoimento-3-lucas.webp" alt="Depoimento de cliente — Lucas Ferreira, Aluno">
+      <img loading="lazy" decoding="async" width="428" height="760" src="assets/depoimentos/depoimento-4-patricia.webp" alt="Depoimento de cliente — Patrícia Almeida, Proprietária de Academia">
+      <img loading="lazy" decoding="async" width="428" height="760" src="assets/depoimentos/depoimento-5-rafael.webp" alt="Depoimento de cliente — Rafael Costa, Consultor Fitness">
       <!-- Duplicado pra loop infinito sem emenda -->
-      <img src="assets/depoimentos/depoimento-1-carlos.png" alt="" aria-hidden="true">
-      <img src="assets/depoimentos/depoimento-2-juliana.png" alt="" aria-hidden="true">
-      <img src="assets/depoimentos/depoimento-3-lucas.png" alt="" aria-hidden="true">
-      <img src="assets/depoimentos/depoimento-4-patricia.png" alt="" aria-hidden="true">
-      <img src="assets/depoimentos/depoimento-5-rafael.png" alt="" aria-hidden="true">
+      <img loading="lazy" decoding="async" width="428" height="760" src="assets/depoimentos/depoimento-1-carlos.webp" alt="" aria-hidden="true">
+      <img loading="lazy" decoding="async" width="428" height="760" src="assets/depoimentos/depoimento-2-juliana.webp" alt="" aria-hidden="true">
+      <img loading="lazy" decoding="async" width="428" height="760" src="assets/depoimentos/depoimento-3-lucas.webp" alt="" aria-hidden="true">
+      <img loading="lazy" decoding="async" width="428" height="760" src="assets/depoimentos/depoimento-4-patricia.webp" alt="" aria-hidden="true">
+      <img loading="lazy" decoding="async" width="428" height="760" src="assets/depoimentos/depoimento-5-rafael.webp" alt="" aria-hidden="true">
     </div>
   </div>
 </div>
@@ -483,13 +518,88 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
   </div>
 </div>
 
+<div class="bonus-sec">
+  <div class="container">
+    <span class="kicker">EXCLUSIVO DO MOVIFIT COMPLETO</span>
+    <h2>4 bônus que você leva de graça</h2>
+    <div class="divider"></div>
+    <div class="bonus-grid">
+      <div class="bonus-card">
+        <img loading="lazy" decoding="async" width="480" height="480" src="assets/bonus/bonus-1-manual-construcao-muscular.webp" alt="Bônus 1 — Manual de Construção Muscular">
+        <div class="info">
+          <span class="tag">BÔNUS 1</span>
+          <h4>Manual de Construção Muscular</h4>
+          <p>Biomecânica básica pra entender cada exercício, os músculos ativados e o ensino correto.</p>
+          <span class="valor"><s>R$ 27,00</s><strong>GRÁTIS</strong></span>
+        </div>
+      </div>
+      <div class="bonus-card">
+        <img loading="lazy" decoding="async" width="480" height="480" src="assets/bonus/bonus-2-guia-postura-correta.webp" alt="Bônus 2 — Guia de Postura Correta">
+        <div class="info">
+          <span class="tag">BÔNUS 2</span>
+          <h4>Guia de Postura Correta</h4>
+          <p>Checklist prático com erros comuns e pontos de atenção pra corrigir alunos com segurança.</p>
+          <span class="valor"><s>R$ 27,00</s><strong>GRÁTIS</strong></span>
+        </div>
+      </div>
+      <div class="bonus-card">
+        <img loading="lazy" decoding="async" width="480" height="480" src="assets/bonus/bonus-3-150-receitas-fitness.webp" alt="Bônus 3 — 150 Receitas Fitness">
+        <div class="info">
+          <span class="tag">BÔNUS 3</span>
+          <h4>150 Receitas Fitness</h4>
+          <p>Receitas prontas pra agregar valor ao seu acompanhamento e melhorar a retenção dos alunos.</p>
+          <span class="valor"><s>R$ 27,00</s><strong>GRÁTIS</strong></span>
+        </div>
+      </div>
+      <div class="bonus-card">
+        <img loading="lazy" decoding="async" width="480" height="480" src="assets/bonus/bonus-4-planilha-periodizacao.webp" alt="Bônus 4 — Planilha de Periodização Automática">
+        <div class="info">
+          <span class="tag">BÔNUS 4</span>
+          <h4>Planilha de Periodização Automática</h4>
+          <p>Monte programas organizados, acompanhe a evolução e economize horas de planejamento.</p>
+          <span class="valor"><s>R$ 27,00</s><strong>GRÁTIS</strong></span>
+        </div>
+      </div>
+    </div>
+    <p class="bonus-total">Só os bônus somam <strong>R$ 108,00</strong> e saem <strong>de graça</strong> no MoviFit Completo.</p>
+  </div>
+</div>
+
 <div class="pricing container" id="pricing">
   <div class="pricing-header">
-    <h2>COMECE AGORA COM A BIBLIOTECA MOVIFIT</h2>
+    <h2>ESCOLHA SEU PLANO</h2>
     <p>Chega de correr atrás de referência na última hora. Tenha centenas de exercícios animados prontos pra visualizar movimentos, montar treinos e corrigir seus alunos com confiança.</p>
   </div>
 
-  <div class="plano-essencial">
+  <div class="planos">
+  <div class="plano plano-completo">
+    <span class="selo-top">⭐ MAIS ESCOLHIDO</span>
+    <span class="badge-roxo">MOVIFIT COMPLETO</span>
+    <img class="mockup" loading="lazy" decoding="async" src="assets/mockup-movifit.webp" alt="Mockup do produto MoviFit — biblioteca completa de exercícios animados">
+    <div class="preco-simples">
+      <span class="de">De <s>R$ 108,00</s> por apenas</span>
+      <span class="valor">R$ 37,90</span>
+      <span class="parcela">Pagamento único</span><br>
+      <span class="economia">Você economiza R$ 70,10</span>
+    </div>
+    <ul class="lista-conteudo">
+      <li><span><strong>+900</strong> exercícios animados</span></li>
+      <li>Organizados por grupo muscular</li>
+      <li>Exercícios para casa e academia</li>
+      <li>Acesso imediato + atualizações</li>
+      <li class="bonus-li"><span><strong>Bônus 1:</strong> Manual de Construção Muscular</span></li>
+      <li class="bonus-li"><span><strong>Bônus 2:</strong> Guia de Postura Correta</span></li>
+      <li class="bonus-li"><span><strong>Bônus 3:</strong> 150 Receitas Fitness</span></li>
+      <li class="bonus-li"><span><strong>Bônus 4:</strong> Planilha de Periodização</span></li>
+    </ul>
+    <a href="https://pay.wiapy.com/CE-SBMkxVXDV" class="btn">QUERO O MOVIFIT COMPLETO</a>
+    <div class="trust">
+      <span>⚡ Acesso Imediato</span>
+      <span>🔒 Compra Segura</span>
+    </div>
+  </div>
+
+  <div class="plano plano-essencial">
     <span class="badge">MOVIFIT ESSENCIAL</span>
     <div class="preco-simples">
       <span class="valor">R$ 10,00</span>
@@ -497,47 +607,15 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
     </div>
     <ul class="lista-conteudo">
       <li>400 GIFs de exercícios animados</li>
-      <li>Exercícios para academia</li>
-      <li>Exercícios para treinar em casa</li>
+      <li>Exercícios para academia e casa</li>
       <li>Organização por grupo muscular</li>
-      <li>Arquivos em alta qualidade</li>
       <li>Acesso imediato</li>
-      <li>Sem mensalidade</li>
+      <li class="nao">Sem os 4 bônus</li>
+      <li class="nao">Biblioteca reduzida</li>
     </ul>
-    <p class="obs">Esta versão inclui somente os 400 GIFs e não acompanha os bônus.</p>
-    <a href="https://pay.wiapy.com/8D8WGdCSnVve" class="btn" id="btn-essencial">QUERO OS 400 GIFS POR R$ 10</a>
+    <p class="obs">Esta versão inclui somente os 400 GIFs.</p>
+    <a href="https://pay.wiapy.com/8D8WGdCSnVve" class="btn" id="btn-essencial">QUERO SÓ OS 400 GIFS</a>
   </div>
-</div>
-
-<div class="pricing-completo container">
-  <div class="pricing-header">
-    <h2>QUERO COMEÇAR COM A EXPERIÊNCIA COMPLETA</h2>
-  </div>
-
-  <div class="plano-completo">
-    <span class="badge-roxo">MOVIFIT COMPLETO</span>
-    <img class="mockup" src="assets/mockup-movifit.png" alt="Mockup do produto MoviFit — biblioteca completa de exercícios animados">
-    <div class="preco-simples">
-      <span class="valor">R$ 37,90</span>
-      <span class="parcela">Pagamento único</span>
-    </div>
-    <ul class="lista-conteudo">
-      <li>Mais de 900 exercícios animados</li>
-      <li>Biblioteca organizada por grupos musculares</li>
-      <li>Exercícios para casa e academia</li>
-      <li>Acesso imediato</li>
-      <li>Atualizações</li>
-      <li>Manual de Construção Muscular</li>
-      <li>Guia de Postura Correta</li>
-      <li>150 Receitas Fitness</li>
-      <li>Planilha de Periodização Automática</li>
-    </ul>
-    <a href="https://pay.wiapy.com/CE-SBMkxVXDV" class="btn">QUERO O MOVIFIT COMPLETO POR R$ 37,90</a>
-
-    <div class="trust">
-      <span>⚡ Acesso Imediato</span>
-      <span>🔒 Compra Segura</span>
-    </div>
   </div>
 </div>
 
@@ -669,19 +747,19 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
 
       <div class="bonus-grid-modal">
         <div>
-          <img src="assets/bonus/bonus-1-manual-construcao-muscular.png" alt="Bônus — Manual de Construção Muscular">
+          <img loading="lazy" decoding="async" width="480" height="480" src="assets/bonus/bonus-1-manual-construcao-muscular.webp" alt="Bônus — Manual de Construção Muscular">
           <p class="nome">Manual de Construção Muscular</p>
         </div>
         <div>
-          <img src="assets/bonus/bonus-2-guia-postura-correta.png" alt="Bônus — Guia de Postura Correta">
+          <img loading="lazy" decoding="async" width="480" height="480" src="assets/bonus/bonus-2-guia-postura-correta.webp" alt="Bônus — Guia de Postura Correta">
           <p class="nome">Guia de Postura Correta</p>
         </div>
         <div>
-          <img src="assets/bonus/bonus-3-150-receitas-fitness.png" alt="Bônus — 150 Receitas Fitness">
+          <img loading="lazy" decoding="async" width="480" height="480" src="assets/bonus/bonus-3-150-receitas-fitness.webp" alt="Bônus — 150 Receitas Fitness">
           <p class="nome">150 Receitas Fitness</p>
         </div>
         <div>
-          <img src="assets/bonus/bonus-4-planilha-periodizacao.png" alt="Bônus — Planilha de Periodização Automática">
+          <img loading="lazy" decoding="async" width="480" height="480" src="assets/bonus/bonus-4-planilha-periodizacao.webp" alt="Bônus — Planilha de Periodização Automática">
           <p class="nome">Planilha de Periodização Automática</p>
         </div>
       </div>
@@ -756,9 +834,27 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
       overlayUpsell.classList.add('aberto');
     });
 
+    // Usa o href do botao, que ja recebeu as UTMs do script do head
     document.getElementById('recusar-upsell').addEventListener('click', function(){
-      window.location.href = 'https://pay.wiapy.com/8D8WGdCSnVve';
+      window.location.href = btnEssencial.href;
     });
+  })();
+
+  // Videos fora do topo: so baixam e tocam quando chegam perto da tela
+  (function(){
+    var videos = document.querySelectorAll('video.lazy-video');
+    function carregar(v){
+      if(!v.src){ v.src = v.getAttribute('data-src'); }
+      var p = v.play(); if(p && p.catch) p.catch(function(){});
+    }
+    if(!('IntersectionObserver' in window)){ videos.forEach(carregar); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ carregar(e.target); }
+        else if(e.target.src){ e.target.pause(); }
+      });
+    }, {rootMargin:'300px'});
+    videos.forEach(function(v){ io.observe(v); });
   })();
 </script>
 
