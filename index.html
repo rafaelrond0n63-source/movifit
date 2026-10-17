@@ -226,14 +226,28 @@
   .comparativo .col-completo li{color:var(--text);}
   .comparativo .col-completo li:before{content:"✓"; color:var(--roxo); font-weight:800; flex:none;}
   .comparativo .preco-col{text-align:center; font-weight:800; font-size:14px; margin-top:10px; color:var(--navy);}
-  .bonus-grid-modal{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:22px;}
-  .bonus-grid-modal img{border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,.14); aspect-ratio:1/1; object-fit:cover;}
+  .bonus-grid-modal{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin-bottom:22px;}
+  .bonus-grid-modal img{width:100%; height:auto; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,.14); aspect-ratio:1/1; object-fit:cover;}
   .bonus-grid-modal .nome{font-size:9px; text-align:center; margin-top:5px; color:var(--text-light); line-height:1.2;}
   .preco-final-modal{text-align:center; margin-bottom:10px;}
   .preco-final-modal .riscado{display:block; font-size:13px; color:var(--text-light); text-decoration:line-through; margin-bottom:4px;}
   .preco-final-modal .destaque{display:block; font-size:19px; font-weight:900; color:var(--roxo); font-family:'Space Grotesk',sans-serif;}
   .modal-upsell-scroll .explicacao{text-align:center; font-size:12px; color:var(--text-light); margin-bottom:20px;}
   .modal-upsell-scroll .btn{margin-bottom:10px;}
+  .up-espere{text-align:center; font-size:13px !important; font-weight:800; color:var(--red) !important; letter-spacing:1px; margin-bottom:2px !important;}
+  .modal-upsell-scroll h3.up-head{font-size:24px; margin-bottom:6px;}
+  .up-head span{color:var(--roxo); white-space:nowrap;}
+  .up-oferta{text-align:center; font-family:'Space Grotesk',sans-serif; font-size:20px !important; font-weight:700; color:var(--navy) !important; margin-bottom:4px !important;}
+  .up-total{text-align:center; font-family:'Space Grotesk',sans-serif; font-size:30px !important; font-weight:800; color:var(--roxo) !important; line-height:1.1; margin-bottom:14px !important;}
+  .up-total small{font-size:15px; letter-spacing:1px;}
+  .preco-final-modal .rotulo{display:block; font-size:12px; font-weight:700; color:var(--navy); margin-bottom:2px;}
+  .up-importante{background:#FEF9C3; border:1px solid #FACC15; color:var(--navy); border-radius:10px; padding:10px 12px; font-size:13px; text-align:center; margin-bottom:10px; line-height:1.4;}
+  .btn-completo-upsell .txt-curto{display:none;}
+  @media(max-width:420px){
+    .btn-completo-upsell .txt-longo{display:none;}
+    .btn-completo-upsell .txt-curto{display:inline;}
+    .modal-upsell-scroll{padding:20px 16px 24px;}
+  }
 
   /* GARANTIA */
   .garantia{padding:20px 20px 48px; background:var(--bg);}
@@ -287,7 +301,10 @@
   .modal h3{font-size:24px; margin-bottom:12px; color:var(--navy);}
   .modal p{font-size:14.5px; color:var(--text-light); margin-bottom:22px;}
   .modal .btn-sim{margin-bottom:10px;}
+  .modal.modal-upsell{max-width:520px; padding:0; border-top:none;}
+  .comparativo .col li{text-align:left;}
   .modal .link-nao{width:100%; background:#fff; color:var(--red); border:2px solid var(--red-light); font-size:13.5px; font-weight:700; padding:13px 18px; border-radius:12px; cursor:pointer;}
+  .modal.modal-upsell .link-nao{background:none; border:none; color:var(--text-light); font-weight:500; font-size:12.5px; text-decoration:underline; padding:8px;}
 
   @media(min-width:560px){
     .hero-grid{gap:12px;}
@@ -578,9 +595,9 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
     <img class="mockup" loading="lazy" decoding="async" src="assets/mockup-movifit.webp" alt="Mockup do produto MoviFit — biblioteca completa de exercícios animados">
     <div class="preco-simples">
       <span class="de">De <s>R$ 108,00</s> por apenas</span>
-      <span class="valor">R$ 37,90</span>
+      <span class="valor">R$ 27,90</span>
       <span class="parcela">Pagamento único</span><br>
-      <span class="economia">Você economiza R$ 70,10</span>
+      <span class="economia">Você economiza R$ 80,10</span>
     </div>
     <ul class="lista-conteudo">
       <li><span><strong>+900</strong> exercícios animados</span></li>
@@ -592,7 +609,7 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
       <li class="bonus-li"><span><strong>Bônus 3:</strong> 150 Receitas Fitness</span></li>
       <li class="bonus-li"><span><strong>Bônus 4:</strong> Planilha de Periodização</span></li>
     </ul>
-    <a href="https://pay.wiapy.com/CE-SBMkxVXDV" class="btn">QUERO O MOVIFIT COMPLETO</a>
+    <a href="https://pay.wiapy.com/CE-SBMkxVXDV" class="btn">QUERO O MOVIFIT COMPLETO POR R$ 27,90</a>
     <div class="trust">
       <span>⚡ Acesso Imediato</span>
       <span>🔒 Compra Segura</span>
@@ -692,7 +709,7 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
 <div class="cta-final">
   <div class="container">
     <h2>Comece agora a corrigir seus alunos com confiança</h2>
-    <p>Daqui a pouco você abre o WhatsApp e já manda o GIF certo pro aluno. Escolha o MoviFit Essencial por R$10 ou já garanta a biblioteca completa com os 4 bônus por R$37,90.</p>
+    <p>Daqui a pouco você abre o WhatsApp e já manda o GIF certo pro aluno. Escolha o MoviFit Essencial por R$10 ou já garanta a biblioteca completa com os 4 bônus por R$27,90.</p>
     <a href="#pricing" class="btn">QUERO COMEÇAR AGORA</a>
     <p class="ancora">A partir de R$10 — pagamento único, sem mensalidade</p>
   </div>
@@ -715,33 +732,33 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
 
 <div class="overlay" id="overlay-upsell">
   <div class="modal modal-upsell">
-    <div class="modal-upsell-topbar">ESPERE! VOCÊ DESBLOQUEOU UMA CONDIÇÃO ESPECIAL</div>
+    <div class="modal-upsell-topbar">OFERTA ESPECIAL DESBLOQUEADA</div>
     <div class="modal-upsell-scroll">
-      <h3>LEVE A BIBLIOTECA COMPLETA POR APENAS R$ 17,90 A MAIS</h3>
-      <p class="sub">Em vez de ficar somente com 400 GIFs, desbloqueie mais de 900 exercícios animados e receba os quatro bônus.</p>
+      <p class="up-espere">ESPERE!</p>
+      <h3 class="up-head">POR APENAS <span>R$ 9,90 A MAIS</span>...</h3>
+      <p class="up-oferta">+900 GIFs + 4 bônus</p>
+      <p class="up-total">R$ 19,90 <small>TOTAL</small></p>
+      <p class="sub">Em vez de levar somente 400 GIFs, desbloqueie a biblioteca completa com mais de 900 exercícios animados e receba os 4 bônus exclusivos.</p>
 
       <div class="comparativo">
         <div class="col col-essencial">
-          <h4>MOVIFIT ESSENCIAL</h4>
+          <h4>SEU PEDIDO ATUAL</h4>
           <ul>
             <li>400 GIFs</li>
-            <li>Sem os quatro bônus</li>
-            <li>Biblioteca reduzida</li>
+            <li>Sem os 4 bônus</li>
           </ul>
           <div class="preco-col">R$ 10,00</div>
         </div>
         <div class="col col-completo">
           <h4>MOVIFIT COMPLETO</h4>
           <ul>
-            <li>Mais de 900 GIFs animados</li>
-            <li>Todos os grupos musculares</li>
-            <li>Academia e casa</li>
-            <li>Alta qualidade</li>
-            <li>Atualizações</li>
+            <li>+900 GIFs de exercícios</li>
+            <li>4 bônus exclusivos</li>
+            <li>Biblioteca completa</li>
             <li>Acesso imediato</li>
             <li>Pagamento único</li>
-            <li>Sem mensalidade</li>
           </ul>
+          <div class="preco-col">R$ 19,90 total</div>
         </div>
       </div>
 
@@ -765,13 +782,15 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
       </div>
 
       <div class="preco-final-modal">
-        <span class="riscado">Preço normal: R$ 37,90</span>
-        <span class="destaque">MOVIFIT COMPLETO POR R$ 27,90</span>
+        <span class="riscado">Preço normal: R$ 27,90</span>
+        <span class="rotulo">Oferta exclusiva desta página:</span>
+        <span class="destaque">R$ 19,90 TOTAL</span>
       </div>
-      <p class="explicacao">Você não pagará R$ 10 mais R$ 27,90. O valor total do seu pedido será somente R$ 27,90.</p>
+      <div class="up-importante"><strong>IMPORTANTE:</strong> você não pagará R$ 10 + R$ 19,90. Seu pedido inteiro será de apenas <strong>R$ 19,90</strong>.</div>
+      <p class="explicacao">Isso significa que, por apenas R$ 9,90 a mais, você sai de 400 GIFs para mais de 900 exercícios e ainda recebe os 4 bônus.</p>
 
-      <a href="https://pay.wiapy.com/ecahpl-QfG7" class="btn btn-completo-upsell">SIM, QUERO MAIS DE 900 GIFS E OS BÔNUS POR R$ 27,90</a>
-      <button class="link-nao" id="recusar-upsell">Não, obrigado. Quero somente os 400 GIFs por R$ 10.</button>
+      <a href="https://pay.wiapy.com/ecahpl-QfG7" class="btn btn-completo-upsell"><span class="txt-longo">SIM! QUERO +900 GIFS E OS 4 BÔNUS POR R$19,90</span><span class="txt-curto">QUERO O COMPLETO POR R$19,90</span></a>
+      <button class="link-nao" id="recusar-upsell">Não, obrigado. Quero somente os 400 GIFs por R$10.</button>
     </div>
   </div>
 </div>
